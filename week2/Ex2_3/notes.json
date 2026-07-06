@@ -1,0 +1,7 @@
+{
+  "pending loads over 10 tons": "LOAD_003: Chennai->Delhi, 11t, pending, CAR_03, 2180km; LOAD_007: Mumbai->Bangalore, 12t, pending, CAR_05, 980km; LOAD_009: Hyderabad->Delhi, 15t, pending, CAR_01, 1580km; LOAD_011: Mumbai->Delhi, 13t, pending, CAR_05, 1420km",
+  "most_delhi_bound_carrier": "CAR_01 has the most Delhi-bound loads: 2 loads (LOAD_001: Mumbai->Delhi 8t pending, LOAD_009: Hyderabad->Delhi 15t pending)",
+  "heaviest pending load": "LOAD_009: Hyderabad->Delhi, 15 tons, pending, CAR_01, 1580 km",
+  "heaviest_pending_load": "LOAD_009: Hyderabad to Delhi, 15 tons, pending, CAR_01, 1580 km",
+  "most Delhi-bound carrier": "CAR_01 has the most Delhi-bound loads with 2 loads: LOAD_001 (Mumbai->Delhi, 8t, pending) and LOAD_009 (Hyderabad->Delhi, 15t, pending)"
+}
