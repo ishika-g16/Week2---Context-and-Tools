@@ -5,27 +5,6 @@
 * cd intern-agents/src/intern_agents/week2/Ex2_1
 * uv run token_ledger.py "What is the lightest load that does to Delhi and what is its distance? Also, list all loads that are lighter than this load." --show-context
 
-## Output:
-Total Iterations to complete:  4
-Total tool calls requested by LLM:  6
-
-------- TOKEN LEDGER: What is the lightest load that does to Delhi and what is its distance? Also, list all loads that are lighter than this load. -------
-Iteration      Input          Output         In: System     Schemas        History        New            
-1              803            63             18             222            0              38             
-2              926            129            18             222            38             146            
-3              1168           244            18             222            184            217            
-4              1568           210            18             222            401            344            
-Total Input Tokens: 4465
-Total Output Tokens: 646
-
-------- TOP 3 RENT PAYERS -------
-
-Message: {'msg': "{'role': 'assistant', 'content': [TextBlock(citations=None, text='Sure! To answer this, I first need to fetch all available loads and their details. Let me start by listing all loads.', type='text'), ToolUseBlock(id='toolu_01T3ydmcauK9HVJuNsupC4pY', caller=DirectCaller(type='direct'), input={}, name='list_loads', type='tool_use')]}", 'iter': 1} with rent = 249
-
-Message: {'msg': "{'role': 'assistant', 'content': [TextBlock(citations=None, text='There are two loads going to Delhi: **LOAD_001** and **LOAD_003**. Let me fetch their details simultaneously!', type='text'), ToolUseBlock(id='toolu_017Pp4qp8vzvghynnyS93Eeq', caller=DirectCaller(type='direct'), input={'load_id': 'LOAD_001'}, name='get_load', type='tool_use'), ToolUseBlock(id='toolu_01RH8toDhShvcAimag2hggFG', caller=DirectCaller(type='direct'), input={'load_id': 'LOAD_003'}, name='get_load', type='tool_use')]}", 'iter': 2} with rent = 248
-
-Message: {'msg': "{'role': 'assistant', 'content': [TextBlock(citations=None, text='The lightest load going to Delhi is **LOAD_001** (Mumbai → Delhi, 8 tons). Now, I need to:\\n1. Compute the distance for LOAD_001 (Mumbai → Delhi).\\n2. Fetch details for all other loads (**LOAD_002**, **LOAD_004**) to find those lighter than 8 tons.\\n\\nLet me do all of this simultaneously!', type='text'), ToolUseBlock(id='toolu_01NGvxeMYYVg39x8ieYutck7', caller=DirectCaller(type='direct'), input={'origin': 'Mumbai', 'destination': 'Delhi'}, name='compute_distance', type='tool_use'), ToolUseBlock(id='toolu_01MwHM2RHcrcs9k6TNo8eXMr', caller=DirectCaller(type='direct'), input={'load_id': 'LOAD_002'}, name='get_load', type='tool_use'), ToolUseBlock(id='toolu_018eTTZeMv98NTEG8m55NmBo', caller=DirectCaller(type='direct'), input={'load_id': 'LOAD_004'}, name='get_load', type='tool_use')]}", 'iter': 3} with rent = 214
-
 
 # Exercise 2.2: Good Tools, Bad Tools
 
@@ -33,6 +12,7 @@ Message: {'msg': "{'role': 'assistant', 'content': [TextBlock(citations=None, te
 * ^^in benchmark.py, import the toolset and agent file you want to run^^
 * uv run benchmark.py
 * ^^benchmark tables shown in comparison.md^^
+
 
 # Exercise 2.3: External Memory & Compaction
 
